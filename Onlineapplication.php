@@ -71,7 +71,6 @@ Please fill in with a tick below in order of preference:<br>
 <input type="radio" name="status" value="PT"> Part Time attendance : Three days a week, please specify the days in the box below <br>
 <!--- FIX THIS PART URGENTLY -->
 <input type="radio" name="status" value="other"> Sun. - Thurs. (09:00 am - 1:00pm)
-<!--- FIX THIS PART URGENTLY -->
 <br>
 <strong>Note</strong> For working mothers who can not collect their children at 3:00pm extra fees will be charged<br><br>	
 <hr>
@@ -104,7 +103,6 @@ Does your child have special needs, require regular medical attention, have any 
 </ol>
 <br>
 <input type="checkbox" name="hereby" value="acceptance"> By checking this field, i hereby accepted all above mentioned rules and regulations.<br>
-<!--- FIX THIS PART URGENTLY -->
 The date this formed is being filled out:<br>
 <input type="date" name="date1"><br>
 <hr>
