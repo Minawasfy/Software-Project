@@ -28,11 +28,7 @@ Mission :
 
 <br>
 
-<div class = "footer">
-contact us : <br>1-#######<br>
-2-######## <br>
-our branches are in both mearag and zahraa el maadi
-</div>
+<!--Inlucde footer file-->
 
 
 </html>

@@ -88,7 +88,7 @@ Emergency Contact's Number:<br>
 Does your child have special needs, require regular medical attention, have any allergies, food dislikes or intolerances, if yes please give more details in the text are below:<br>
 <textarea name="info" rows="4" cols="50"></textarea><br>
 <hr>
-<p><u><h2 align="left">Rules and Regulations</h2></u>.</p>
+<p><u><h2 align="center">Rules and Regulations</h2></u>.</p>
 <ol>
 <li>Nursery working hours is from 08:00am till 03:00pm,1 waiting hour is applied for parents (Till 04:00pm) as pick up time, any delay after 04:00pm will be charged.</li>
 <li>In case of child absence, please notify our nursery management one week before the vacation, if parent would not notify the nursery and this absence will exceed a month, registration fee will be charged again.</li>
@@ -103,7 +103,8 @@ Does your child have special needs, require regular medical attention, have any 
 </ol>
 <br>
 <input type="checkbox" name="hereby" value="acceptance"> By checking this field, i hereby accepted all above mentioned rules and regulations.<br>
-The date this formed is being filled out:<br>
+<br>
+The date this formed is being filled out:
 <input type="date" name="date1"><br>
 <hr>
 <input type="submit" value="Submit Form">
@@ -155,7 +156,7 @@ The date this formed is being filled out:<br>
 <br>
 <a href="http://localhost/stuff/Lab01/Delete.php" > Delete </a>
 
-
+<!--Inlucde footer file-->
 </body>
 
 
