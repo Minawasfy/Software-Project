@@ -12,33 +12,31 @@
 			}
 			else if (document.getElementById('ozr').checked || document.getElementById('ozr2').checked){
 				document.getElementById('ptdyz').style.display = 'none';
+				document.getElementById('sun').checked= false;
+				document.getElementById('mon').checked= false;
+				document.getElementById('tue').checked= false;
+				document.getElementById('wed').checked= false;
+				document.getElementById('thu').checked= false;
 			}
 		};
 		function KeepCount() {
-
 			var count = 0;
-
 			if (document.app.sun.checked)
 			{count = count + 1;}
-
 			if (document.app.mon.checked)
 			{count = count + 1;}
-
 			if (document.app.tue.checked)
 			{count = count + 1;}
-
 			if (document.app.wed.checked)
 			{count = count + 1;}
-
 			if (document.app.thu.checked)
 			{count = count + 1;}
-
 			if (count > 3)
 			{
-				alert('Pick Just Three Please');
-				document.getElementById('ptdyz').style.display= 'none';
+				alert('Please only pick 3 days or one of the other options.');
+				document.getElementById('ozr').checked= true;
 			}	
-		}
+		};
 		function relocate(){
 			if (document.getElementById('editp').clicked) {
 				window.location= 'http://localhost/stuff/Lab01/Edit.php';
@@ -46,7 +44,7 @@
 			else if (document.getElementById('deletep').clicked){
 				window.location= 'http://localhost/stuff/Lab01/Delete.php';
 			}
-		}
+		};
 	</script>
 </head>
 
@@ -110,11 +108,11 @@
 	<input type="radio" name="status" value="FT" id="ozr" onclick="ptdays();" checked> Full Time attendance : Sun.  - Thurs.(08:00 am - 3:00pm)<br>
 	<input type="radio" name="status" value="PT" id="PTD" onclick="ptdays();"> Part Time attendance : Three days a week, please specify the days in the box below <br>
 	<div id="ptdyz" >
-		<input type="checkbox" name="sun" value="DY" onclick="KeepCount()">Sunday<br>
-		<input type="checkbox" name="mon" value="DY" onclick="KeepCount()">Monday<br>
-		<input type="checkbox" name="tue" value="DY" onclick="KeepCount()">Tuesday<br>
-		<input type="checkbox" name="wed" value="DY" onclick="KeepCount()">Wednesday<br>
-		<input type="checkbox" name="thu" value="DY" onclick="KeepCount()">Thursday<br>
+		<input type="checkbox" name="sun" value="DY" onclick="KeepCount(), ptdays()" id="sun">Sunday<br>
+		<input type="checkbox" name="mon" value="DY" onclick="KeepCount(), ptdays()" id="mon">Monday<br>
+		<input type="checkbox" name="tue" value="DY" onclick="KeepCount(), ptdays()" id="tue">Tuesday<br>
+		<input type="checkbox" name="wed" value="DY" onclick="KeepCount(), ptdays()" id="wed">Wednesday<br>
+		<input type="checkbox" name="thu" value="DY" onclick="KeepCount(), ptdays()" id="thu">Thursday<br>
 	</div>
 	<!--- FIX THIS PART URGENTLY -->
 	<input type="radio" name="status" value="other" id="ozr2" onclick="ptdays();"> Sun. - Thurs. (09:00 am - 1:00pm)
@@ -127,7 +125,18 @@
 	Emergency Contact's Address:<br>
 	<input type="text" name="address1"><br>
 	Relationship:<br>
-	<input type="text" name="relation"><br>
+	<!--<input type="text" name="relation"><br>-->
+	<select>
+		<option value="auntM">Aunt (mum's side)</option>
+	    <option value="uncleM">Uncle (mum's side)</option>
+	    <option value="grandpaM">Grandpa (mum's side)</option>
+	    <option value="grandmaM">Grandma (mum's side)</option>
+	    <option value="auntD">Aunt (dad's side)</option>
+	    <option value="uncleD">Uncle (dad's side)</option>
+	    <option value="grandpaD">Grandpa (dad's side)</option>
+	    <option value="grandmaD">Grandma (dad's side)</option>
+	    <option value="cousin">Cousin (has to be 18+ years old)</option>
+	</select><br>
 	<!--- FIX THIS PART URGENTLY -->
 	Emergency Contact's Number:<br>
 	<input type="text" name="contact1"  maxlength="11"><br>
