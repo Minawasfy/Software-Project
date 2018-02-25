@@ -51,6 +51,11 @@
 </head>
 
 <body>
+    
+<header> 
+<a href="/index.php" > Back </a>    
+</header>   
+    
 	<div class = "appform">
 	<h1 align="center"> Application Form </h1>
 	<form name="app">

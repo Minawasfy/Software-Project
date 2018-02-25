@@ -10,6 +10,14 @@ Fun & Learn
 
 <body>
 
+<header>
+<a href="/Onlineapplication.php" > Online Application </a>
+<br>
+<a href="/About us.php" > About us </a>
+<br>
+<a href="/Contact us.php" > Contact us </a>
+<br>    
+</header>    
 <div align="justify" class = "wt">
 <strong><h2>An important Message to all the parents : </h2></strong>
 <hr>
