@@ -103,10 +103,10 @@
 	<p><u>Under any circumstance we will not receive the child to any other person unless the parents will inform us previously with the identity of this person</u>.</p>
 	<p><u>*Nursery is serving 2 nutritious meals included in the monthly fees</u>.</p>
 	<hr>
-	<!-- Make this a required field/ choice-->
+	<!-- Needs the required field to be made as a javascript function-->
 	<h1 align="center"> Requested for Attendance</h1>
 	Please fill in with a tick below in order of preference:<br>
-    <label><input type="radio" name="status" value="FT" id="ozr" required onclick="ptdays();" required> Full Time attendance : Sun.  - Thurs.(08:00 am - 3:00pm)<br></label>
+    <label><input type="radio" name="status" value="FT" id="ozr" required onclick="ptdays();" checked> Full Time attendance : Sun.  - Thurs.(08:00 am - 3:00pm)<br></label>
         
 	<label><input type="radio" name="status" value="PT" id="PTD" onclick="ptdays();"> Part Time attendance : Three days a week, please specify the days in the box below
     <br></label>
