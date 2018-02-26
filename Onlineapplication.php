@@ -59,50 +59,51 @@
 	<form name="app">
 
 	Child's name:<br>
-	<input type="text" name="cname"><br>
+	<input type="text" name="cname" required><br>
 	Date of birth:<br>
-	<input type="date" name="dob"><br>
+	<input type="date" name="dob" required><br>
 	Present age:<br>
-	<input type="number" name="page" min="1" max ="5"><br>
+	<input type="number" name="page" min="1" max ="5" required><br>
 	Desired Date of entry:<br>
-	<input type="number" name="dde" min="1" max ="5"><br>
+	<input type="number" name="dde" min="1" max ="5" required><br>
 	<hr>
 	Father's name:<br>
-	<input type="text" name="Fname"><br>
+	<input type="text" name="Fname"  required><br>
 	Mobile number:<br>
-	<input type="text" name="number1" maxlength="11"><br>
+	<input type="text" name="number1" maxlength="11" required><br>
 	Facebook Account:<br>
-	<input type="text" name="Fb1"><br>
+	<input type="text" name="Fb1" required><br>
 	Occupation:<br>
-	<input type="text" name="occ1"><br>
+	<input type="text" name="occ1" required><br>
 	Office phone number:<br>
-	<input type="text" name="off1" maxlength="8"><br>
+	<input type="text" name="off1" maxlength="8" required><br>
 	<hr>
 	Mother's name:<br>
-	<input type="text" name="Mname"><br>
+	<input type="text" name="Mname" required><br>
 	Mobile number:<br>
-	<input type="text" name="number2" maxlength="11"><br>
+	<input type="text" name="number2" maxlength="11"  required><br>
 	Facebook Account:<br>
-	<input type="text" name="Fb2"><br>
+	<input type="text" name="Fb2" ><br>
 	Occupation:<br>
-	<input type="text" name="occ2"><br>
+	<input type="text" name="occ2" required><br>
 	Office phone number:<br>
-	<input type="text" name="off2" maxlength="8"><br>
+	<input type="text" name="off2" maxlength="8" required><br>
 	<hr>
 	Parents Are:<br>
-	<input type="radio" name="status" value="Married" checked> Married
-	<input type="radio" name="status" value="Separated"> Separated<br>
+	<label><input type="radio" name="status" value="Married"  > Married</label>
+	<label><input type="radio" name="status" value="Separated" > Separated<br></label>
+	<!-- Make this a required field/ choice-->
 	Home Address:<br>
-	<input type="text" name="address"><br>
+	<input type="text" name="address" required><br>
 	Home Telephone number:<br>
-	<input type="text" name="htn" maxlength="8"><br>
+	<input type="text" name="htn" maxlength="8 required"><br>
 	Name of the person who will usually pick up the child:<br>
-	<input type="text" name="name1"><br>
+	<input type="text" name="name1" required><br>
 
 	<p><u>Under any circumstance we will not receive the child to any other person unless the parents will inform us previously with the identity of this person</u>.</p>
 	<p><u>*Nursery is serving 2 nutritious meals included in the monthly fees</u>.</p>
 	<hr>
-
+	<!-- Make this a required field/ choice-->
 	<h1 align="center"> Requested for Attendance</h1>
 	Please fill in with a tick below in order of preference:<br>
 	<input type="radio" name="status" value="FT" id="ozr" onclick="ptdays();" checked> Full Time attendance : Sun.  - Thurs.(08:00 am - 3:00pm)<br>
@@ -118,13 +119,13 @@
 	<br>
 	<strong>Note</strong> For working mothers who can not collect their children at 3:00pm extra fees will be charged<br><br>	
 	<hr>
-	<h1 align="center"> Emergency contact 1 </h1>
+	<h1 align="center"> Emergency contact </h1>
 	Emergency Contact's Name:<br>
-	<input type="text" name="ern"><br>
+	<input type="text" name="ern" required><br>
 	Emergency Contact's Address:<br>
-	<input type="text" name="address1"><br>
+	<input type="text" name="address1" required><br>
+	<!-- Make this a required field/ choice-->
 	Relationship:<br>
-	<!--<input type="text" name="relation"><br>-->
 	<select>
 		<option value="auntM">Aunt (mum's side)</option>
 	    <option value="uncleM">Uncle (mum's side)</option>
@@ -138,7 +139,7 @@
 	</select><br>
 	
 	Emergency Contact's Number:<br>
-	<input type="text" name="contact1"  maxlength="11"><br>
+	<input type="text" name="contact1"  maxlength="11" required><br>
 
 	Does your child have special needs, require regular medical attention, have any allergies, food dislikes or intolerances, if yes please give more details in the text are below:<br>
 	<textarea name="info" rows="4" cols="50"></textarea><br>
@@ -157,7 +158,7 @@
 	<li>Please make your decision either your child will be full-timer or part-timer, noting that monthly fees are not refundable under any circumstances.</li>
 	</ol>
 	<br>
-	<input type="checkbox" name="hereby" value="acceptance"> By checking this field, I hereby accepted all above mentioned rules and regulations.<br>
+	<input type="checkbox" name="hereby" value="acceptance" required> By checking this field, I hereby accepted all above mentioned rules and regulations.<br>
 	The date this formed is being filled out:<br>
 	<input type="date" name="date1"><br>
 	<hr>
