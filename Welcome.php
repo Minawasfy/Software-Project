@@ -36,10 +36,6 @@ work, a step that should come at some stage of preschool education without stres
 <!--Inlucde footer file-->
 
 <br>
-<a href="http://localhost/stuff/Lab01/Edit.php" > Edit </a>
-<br>
-<a href="http://localhost/stuff/Lab01/Delete.php" > Delete </a>
-
 
 </body>
 
