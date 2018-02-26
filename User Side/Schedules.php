@@ -10,10 +10,6 @@ Fun & Learn
 
 <body>
 
-<header>
-<a href="/index.php">Back</a>    
-</header>    
-    
 <div class = "scheds">
 
 <table style="width: 100%" border="5" >
