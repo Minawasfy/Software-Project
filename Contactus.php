@@ -18,7 +18,7 @@ Fun & Learn
 <li>Transportation is available inside Maadi</li>
 <li>All teachers are foreigners or egyptians who are fluent in English </li>
 </ul>
-<strong><h1>contact us :</h1></strong> 
+<strong><h1>Contact Us:</h1></strong> 
 Address:El Shatr(7), Zahraa El Maadi
 <br>Contact:01067088943<br>
 <br>Address:Al Me3rag, Maadi
