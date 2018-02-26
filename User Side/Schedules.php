@@ -11,7 +11,7 @@ Fun & Learn
 <body>
 
 <header>
-<a href="/index.html">Back</a>    
+<a href="/index.php">Back</a>    
 </header>    
     
 <div class = "scheds">
