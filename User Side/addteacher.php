@@ -13,6 +13,9 @@ Fun & Learn
 
 <body>
 
+<header>
+<a href="/index.php" > Back </a>    
+</header>    
 
 <div class = "teacher1">
 

@@ -11,6 +11,10 @@ Fun & Learn: About Us
 
 <body>
 
+<header>
+<a href="/index.php">Back</a>    
+</header>    
+    
 <div class = "mission">
 
 <strong><h2>Mission :</h2></strong>

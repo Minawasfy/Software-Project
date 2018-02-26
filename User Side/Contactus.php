@@ -10,6 +10,10 @@ Fun & Learn: Contact us
 
 <body>
 
+<header>
+<a href="/index.php">Back</a>    
+</header>        
+    
 <div class = "footer">
 
 <strong><h1>Contact Us:</h1></strong> 
