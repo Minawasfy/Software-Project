@@ -114,7 +114,6 @@
 		<input type="checkbox" name="wed" value="DY" onclick="KeepCount(), ptdays()" id="wed">Wednesday<br>
 		<input type="checkbox" name="thu" value="DY" onclick="KeepCount(), ptdays()" id="thu">Thursday<br>
 	</div>
-	<!--- FIX THIS PART URGENTLY -->
 	<input type="radio" name="status" value="other" id="ozr2" onclick="ptdays();"> Sun. - Thurs. (09:00 am - 1:00pm)
 	<br>
 	<strong>Note</strong> For working mothers who can not collect their children at 3:00pm extra fees will be charged<br><br>	
@@ -137,7 +136,7 @@
 	    <option value="grandmaD">Grandma (dad's side)</option>
 	    <option value="cousin">Cousin (has to be 18+ years old)</option>
 	</select><br>
-	<!--- FIX THIS PART URGENTLY -->
+	
 	Emergency Contact's Number:<br>
 	<input type="text" name="contact1"  maxlength="11"><br>
 
