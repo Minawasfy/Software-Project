@@ -7,7 +7,8 @@
 Fun & Learn
 
 </title>
-
+<link rel="stylesheet" type="text/css" href="/Logo.css">
+<img src="/logo.png" id="logo">
 <h1 align="left"> <p><u>Teacher Application:</u></p> </h1>
 <button type="button"><< previous application</button>
 <button type="button">next aplication >></button>
@@ -16,9 +17,8 @@ Fun & Learn
 <body>
 
 <header>
-<a href="/index.php" > Back </a>    
+<a href="/index.php" > Back </a>
 </header>
-
 <div class = "teacher2">
 
 

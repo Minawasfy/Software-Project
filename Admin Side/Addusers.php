@@ -3,7 +3,8 @@
 	<title>Fun & Learn</title>
 	<h1>Application</h1>
 </head>
-
+<link rel="stylesheet" type="text/css" href="Logo.css">
+<img src="logo.png" id="logo">
 <body>
     
 <header> 
