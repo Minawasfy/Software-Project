@@ -5,16 +5,14 @@
 Fun & Learn: About Us
 
 </title>
-<h1>About Us</h1>
+<link rel="stylesheet" type="text/css" href="Logo.css">
+<img src="logo.png" id="logo">
+<h1 id="hdr">About Us</h1>
 
 </head>
 
 <body>
 
-<header>
-<a href="/index.php">Back</a>    
-</header>    
-    
 <div class = "mission">
 
 <strong><h2>Mission :</h2></strong>
@@ -27,9 +25,6 @@ where the child can enjoy learning through playing by using different activities
 Our concept is aiming to increase the child's self confidence, encourage him to think
 widely and independently & work using his/her  own hands to prepare him to do pencil & paper
 work, a step that should come at some stage of preschool education without stressing over it.
-
-
-
 </div>
 <br>
 <div class = "vision">
@@ -46,7 +41,10 @@ work, a step that should come at some stage of preschool education without stres
 
 <br>
 
-<!--Inlucde footer file-->
+	<div id="footer">
+		<object type="text/html" data="Contactus.php" id="ftr"></object>
+	</div>
 
+	
 
 </html>

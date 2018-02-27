@@ -7,15 +7,18 @@
 Fun & Learn
 
 </title>
+<link rel="stylesheet" type="text/css" href="/Logo.css">
+<img src="/logo.png" id="logo">
 
+<header>
+    <a href="/index.php">Back</a>
+</header>
+    
 <h1 align="left"> <p><u>Preliminary Teacher Application:</u></p> </h1>
 </head>
 
 <body>
 
-<header>
-<a href="/index.php" > Back </a>    
-</header>    
 
 <div class = "teacher1">
 

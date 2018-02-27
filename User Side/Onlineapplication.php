@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Fun & Learn</title>
-	<h1>Online Application</h1>
+<link rel="stylesheet" type="text/css" href="Logo.css">
 	<script type="text/javascript">
 		window.onload = function() {
 			document.getElementById('ptdyz').style.display = 'none';
@@ -51,13 +51,13 @@
 <body>
     
 <header> 
-<a href="/index.php" > Back </a>    
+    <img src="logo.png" id="logo">
+    <h1 id="hdr">Online Application</h1>
+    <a href="/index.php" id="bk"> Back </a>
 </header>   
-    
 	<div class = "appform">
 	<h1 align="center"> Application Form </h1>
 	<form name="app">
-
 	Child's name:<br>
 	<input type="text" name="cname" required><br>
 	Date of birth:<br>
@@ -72,7 +72,7 @@
 	Mobile number:<br>
 	<input type="text" name="number1" maxlength="11" required><br>
 	Facebook Account:<br>
-	<input type="text" name="Fb1" required><br>
+	<input type="text" name="Fb1" ><br>
 	Occupation:<br>
 	<input type="text" name="occ1" required><br>
 	Office phone number:<br>
@@ -90,7 +90,7 @@
 	<input type="text" name="off2" maxlength="8" required><br>
 	<hr>
 	Parents Are:<br>
-	<label><input type="radio" name="status" value="Married"  > Married</label>
+	<label><input type="radio" name="status" value="Married" required> Married</label>
 	<label><input type="radio" name="status" value="Separated" > Separated<br></label>
 	<!-- Make this a required field/ choice-->
 	Home Address:<br>
@@ -103,11 +103,15 @@
 	<p><u>Under any circumstance we will not receive the child to any other person unless the parents will inform us previously with the identity of this person</u>.</p>
 	<p><u>*Nursery is serving 2 nutritious meals included in the monthly fees</u>.</p>
 	<hr>
-	<!-- Make this a required field/ choice-->
+	<!-- Needs the required field to be made as a javascript function-->
 	<h1 align="center"> Requested for Attendance</h1>
 	Please fill in with a tick below in order of preference:<br>
-	<input type="radio" name="status" value="FT" id="ozr" onclick="ptdays();" checked> Full Time attendance : Sun.  - Thurs.(08:00 am - 3:00pm)<br>
-	<input type="radio" name="status" value="PT" id="PTD" onclick="ptdays();"> Part Time attendance : Three days a week, please specify the days in the box below <br>
+    <label><input type="radio" name="status" value="FT" id="ozr" required onclick="ptdays();" checked> Full Time attendance : Sun.  - Thurs.(08:00 am - 3:00pm)<br></label>
+        
+	<label><input type="radio" name="status" value="PT" id="PTD" onclick="ptdays();"> Part Time attendance : Three days a week, please specify the days in the box below
+    <br></label>
+        
+    <label><input type="radio" name="status" value="other" id="ozr2" onclick="ptdays();"> Sun. - Thurs. (09:00 am - 1:00pm)<br></label>    
 	<div id="ptdyz" >
 		<input type="checkbox" name="sun" value="DY" onclick="KeepCount(), ptdays()" id="sun">Sunday<br>
 		<input type="checkbox" name="mon" value="DY" onclick="KeepCount(), ptdays()" id="mon">Monday<br>
@@ -115,7 +119,7 @@
 		<input type="checkbox" name="wed" value="DY" onclick="KeepCount(), ptdays()" id="wed">Wednesday<br>
 		<input type="checkbox" name="thu" value="DY" onclick="KeepCount(), ptdays()" id="thu">Thursday<br>
 	</div>
-	<input type="radio" name="status" value="other" id="ozr2" onclick="ptdays();"> Sun. - Thurs. (09:00 am - 1:00pm)
+	
 	<br>
 	<strong>Note</strong> For working mothers who can not collect their children at 3:00pm extra fees will be charged<br><br>	
 	<hr>
@@ -126,7 +130,8 @@
 	<input type="text" name="address1" required><br>
 	<!-- Make this a required field/ choice-->
 	Relationship:<br>
-	<select>
+	<select required>
+        <option value="">None</option>
 		<option value="auntM">Aunt (mum's side)</option>
 	    <option value="uncleM">Uncle (mum's side)</option>
 	    <option value="grandpaM">Grandpa (mum's side)</option>

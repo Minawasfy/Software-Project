@@ -4,6 +4,8 @@
 <title>
 Fun & Learn
 </title>
+<link rel="stylesheet" type="text/css" href="/Logo.css">
+<img src="/logo.png" id="logo">
 <h1>Schedules</h1>
 
 </head>
@@ -11,8 +13,8 @@ Fun & Learn
 <body>
 
 <header>
-<a href="/index.php">Back</a>    
-</header>        
+<a href="/index.php" id="bk"> Back </a>
+</header>    
     
 <div class = "scheds">
 
