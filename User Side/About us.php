@@ -6,7 +6,7 @@ Fun & Learn: About Us
 
 </title>
 <link rel="stylesheet" type="text/css" href="Logo.css">
-<img src="logo.png" id="logo">
+<img src="logo.png" id="logo" onclick="location.href='index.php';">
 <h1 id="hdr">About Us</h1>
 
 </head>

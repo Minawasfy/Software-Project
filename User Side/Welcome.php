@@ -11,7 +11,7 @@
 <body>
 
 <header>
-	<img src="logo.png" id="logo">
+	<img src="logo.png" id="logo" onclick="location.href='index.php';">
 	<h1 id="welcm">Welcome</h1>
 	<ul id="topnav">
 		<li id="opt"><a id="addr" href="/Onlineapplication.php" >Online Application </a></li>

@@ -8,7 +8,7 @@ Fun & Learn
 
 </title>
 <link rel="stylesheet" type="text/css" href="/Logo.css">
-<img src="/logo.png" id="logo">
+<img src="logo.png" id="logo" onclick="location.href='index.php';">
 
 <header>
     <a href="/index.php">Back</a>

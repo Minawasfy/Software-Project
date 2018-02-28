@@ -51,7 +51,7 @@
 <body>
     
 <header> 
-    <img src="logo.png" id="logo">
+    <img src="logo.png" id="logo" onclick="location.href='index.php';">
     <h1 id="hdr">Online Application</h1>
     <a href="/index.php" id="bk"> Back </a>
 </header>   
@@ -110,15 +110,15 @@
         
 	<label><input type="radio" name="status" value="PT" id="PTD" onclick="ptdays();"> Part Time attendance : Three days a week, please specify the days in the box below
     <br></label>
-        
-    <label><input type="radio" name="status" value="other" id="ozr2" onclick="ptdays();"> Sun. - Thurs. (09:00 am - 1:00pm)<br></label>    
-	<div id="ptdyz" >
+    <div id="ptdyz" >
 		<input type="checkbox" name="sun" value="DY" onclick="KeepCount(), ptdays()" id="sun">Sunday<br>
 		<input type="checkbox" name="mon" value="DY" onclick="KeepCount(), ptdays()" id="mon">Monday<br>
 		<input type="checkbox" name="tue" value="DY" onclick="KeepCount(), ptdays()" id="tue">Tuesday<br>
 		<input type="checkbox" name="wed" value="DY" onclick="KeepCount(), ptdays()" id="wed">Wednesday<br>
 		<input type="checkbox" name="thu" value="DY" onclick="KeepCount(), ptdays()" id="thu">Thursday<br>
 	</div>
+        
+    <label><input type="radio" name="status" value="other" id="ozr2" onclick="ptdays();"> Sun. - Thurs. (09:00 am - 1:00pm)<br></label>   
 	
 	<br>
 	<strong>Note</strong> For working mothers who can not collect their children at 3:00pm extra fees will be charged<br><br>	

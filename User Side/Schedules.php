@@ -5,8 +5,8 @@
 Fun & Learn
 </title>
 <link rel="stylesheet" type="text/css" href="/Logo.css">
-<img src="/logo.png" id="logo">
-<h1>Schedules</h1>
+<img src="logo.png" id="logo" onclick="location.href='index.php';">
+<h1 id="hdr">Schedules</h1>
 
 </head>
 

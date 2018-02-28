@@ -24,7 +24,7 @@ header #logo{
 #hdr2{
 	text-align: left;
 	position: relative;
-	top: -80;
+	top: -70;
 	left: -300;
 }
 #topnav{
@@ -46,8 +46,20 @@ header #logo{
 }
 #admin{
 	position: relative;
+	list-style-type: none;
 	top: -120;
 	left: 600;
+}
+#admnNav{
+    float: left;
+}
+#admAdr:hover{
+	background-color: #b8b894;
+}
+#admAdr{
+    display: block;
+    padding: 8px;
+    background-color: #ccccb3;
 }
 .wt, .ei{
 	position: relative;

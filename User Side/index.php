@@ -11,7 +11,7 @@
 <body>
 
 <header>
-	<img src="logo.png" id="logo">
+	<img src="logo.png" id="logo" onclick="location.href='index.php';">
 	<h1 id="welcm">Welcome</h1>
 	<ul id="topnav">
 		<li id="opt"><a id="addr" href="/Onlineapplication.php" >Online Application </a></li>
@@ -22,12 +22,12 @@
 		<li id="opt"><a id="addr" href="" >Events </a></li>
 	</ul>
 		<h3 id="hdr2">Admin Side</h1>
-		<a href="/acceptteacher.php" id="admin">Teacher Acceptance</a>
-        <a href="/Addusers.php" id="admin">User Add</a>
-        <a href="/deleteuser.php" id="admin">User Delete</a>
-        <a href="/editteacher.php" id="admin">Teacher Edit</a>
-        <br>
- 
+	<ul id="admin">
+		<li id="admnNav"><a href="/acceptteacher.php" id="admAdr">Teacher Acceptance</a></li>
+        <li id="admnNav"><a href="/Addusers.php" id="admAdr">User Add</a></li>
+        <li id="admnNav"><a href="/deleteuser.php" id="admAdr">User Delete</a></li>
+        <li id="admnNav"><a href="/editteacher.php" id="admAdr">Teacher Edit</a></li>
+	</ul>
 </header>    
 	<div align="justify" class = "wt">
 		<h2>An important Message to all the parents : </h2><hr>
