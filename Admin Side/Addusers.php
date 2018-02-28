@@ -4,7 +4,7 @@
 	<h1>Application</h1>
 </head>
 <link rel="stylesheet" type="text/css" href="Logo.css">
-<img src="logo.png" id="logo">
+<img src="logo.png" id="logo" onclick="location.href='index.php';">
 <body>
     
 <header> 
