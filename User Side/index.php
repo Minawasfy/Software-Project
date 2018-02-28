@@ -4,14 +4,14 @@
 	<title>
 	Fun & Learn: Welcome
 	</title>
-	<link rel="stylesheet" type="text/css" href="/StyleSheet.css">
+	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
 
 </head>
 
 <body>
 
 <header>
-	<img src="/logo.png" id="logo">
+	<img src="logo.png" id="logo">
 	<h1 id="welcm">Welcome</h1>
 	<ul id="topnav">
 		<li id="opt"><a id="addr" href="/Onlineapplication.php" >Online Application </a></li>
@@ -21,6 +21,12 @@
 		<li id="opt"><a id="addr" href="" >Gallery </a></li> <!--UPDATE LINKS-->
 		<li id="opt"><a id="addr" href="" >Events </a></li>
 	</ul>
+		<h3 id="hdr2">Admin Side</h1>
+		<a href="/acceptteacher.php" id="admin">Teacher Acceptance</a>
+        <a href="/Addusers.php" id="admin">User Add</a>
+        <a href="/deleteuser.php" id="admin">User Delete</a>
+        <a href="/editteacher.php" id="admin">Teacher Edit</a>
+        <br>
  
 </header>    
 	<div align="justify" class = "wt">
@@ -50,16 +56,9 @@
     
 	<div id="footer">
 		<object type="text/html" data="Contactus.php" id="ftr"></object>
-        <br>
-        <h1>Admin Side</h1>
-		<a href="/acceptteacher.php">Teacher Acceptance</a>
-        <a href="/Addusers.php" >User Add</a>
-        <a href="/deleteuser.php">User Delete</a>
-        <a href="/editteacher.php">Teacher Edit</a>
-        <br>
 	</div>
 
-	<br
+	<br>
 
 </body>
 </html>

@@ -21,6 +21,12 @@ header #logo{
 	top: -60px;
 	left: 300px;
 }
+#hdr2{
+	text-align: left;
+	position: relative;
+	top: -80;
+	left: -300;
+}
 #topnav{
 	position: relative;
     list-style-type: none;
@@ -37,6 +43,11 @@ header #logo{
     display: block;
     padding: 8px;
     background-color: #ccccb3;
+}
+#admin{
+	position: relative;
+	top: -120;
+	left: 600;
 }
 .wt, .ei{
 	position: relative;
