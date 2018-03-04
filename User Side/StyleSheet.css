@@ -16,9 +16,14 @@ header #logo{
 	width: 120px;
 	height: 60px;
 }
+.secretGABtn{
+	position: absolute;
+	top: 50px;
+	right: 20px;
+}
 #welcm{
 	position: relative;
-	top: -60px;
+	top: -70px;
 	left: 300px;
 }
 #hdr2{
@@ -29,12 +34,13 @@ header #logo{
 }
 #topnav{
 	position: relative;
-    list-style-type: none;
-    top: -110px;
-    left: 500px;
+  list-style-type: none;
+  top: -130px;
+  left: 500px;
 }
 #opt{
     float: left;
+		border: 1px solid #b8b894;
 }
 #addr:hover{
 	background-color: #b8b894;
@@ -52,6 +58,7 @@ header #logo{
 }
 #admnNav{
     float: left;
+		border: 1px solid #b8b894;
 }
 #admAdr:hover{
 	background-color: #b8b894;
@@ -60,6 +67,14 @@ header #logo{
     display: block;
     padding: 8px;
     background-color: #ccccb3;
+}
+#adminGA{
+	width: 50%;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 .wt, .ei{
 	position: relative;
