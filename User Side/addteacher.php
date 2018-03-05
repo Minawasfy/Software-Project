@@ -29,7 +29,7 @@ Full name:<br>
 <input type="text" name="Fname" required><br>
 Date of birth:<br>
 <input type="date" name="tdob" required><br>
-Nationality age:<br>
+Nationality:<br>
 <input type="number" name="nat" required><br>
 Home Address:<br>
 <input type="text" name="address1" required><br>
