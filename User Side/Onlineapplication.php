@@ -164,7 +164,7 @@
 	</ol>
 	<br>
 	<input type="checkbox" name="hereby" value="acceptance" required> By checking this field, I hereby accepted all above mentioned rules and regulations.<br>
-	The date this formed is being filled out:<br>
+	The date this form is being filled out:<br>
 	<input type="date" name="date1"><br>
 	<hr>
 	<input type="submit" value="Submit Form">
