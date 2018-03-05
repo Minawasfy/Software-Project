@@ -6,6 +6,7 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
 	<link rel="stylesheet" href="SecretGetAway.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript">
 		window.onload = function() {
 			document.getElementById('navMenu').style.display = 'none';
