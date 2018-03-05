@@ -9,7 +9,7 @@
     
 <header> 
 <a href="/index.php" > Back </a>
-	
+	<br>
 <button type="button"><< previous application</button>
 <button type="button">next aplication >></button>
 </header>   
