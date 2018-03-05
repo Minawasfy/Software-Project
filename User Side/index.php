@@ -8,7 +8,15 @@
 	<link rel="stylesheet" href="SecretGetAway.css">
 	<script type="text/javascript">
 		window.onload = function() {
+			document.getElementById('navMenu').style.display = 'none';
 			document.getElementById('sBar').style.display = 'none';
+		};
+		function changeM(x) {
+			x.classList.toggle("change");
+			document.getElementById('navMenu').style.display = 'block';
+			if (document.getElementById('Menicon').clicked){
+				document.getElementById('navMenu').display = 'none';
+			}
 		};
 		function sgaBox() {
 			document.getElementById('sBar').style.display = 'block';
@@ -23,25 +31,36 @@
 	<header>
 		<img src="logo.png" id="logo" onclick="location.href='index.php';">
 		<h1 id="welcm">Welcome</h1>
-		<button type="button" class="secretGABtn" onclick="sgaBox()">Admin</button>
-		<ul id="topnav">
-			<li id="opt"><a id="addr" href="/Onlineapplication.php" >Online Application </a></li>
-			<li id="opt"><a id="addr" href="/About us.php" >About us </a></li>
-      <li id="opt"><a id="addr" href="/addteacher.php" >Teacher Registration </a></li>
-      <li id="opt"><a id="addr" href="/Schedules.php" >Schedule </a></li>
-			<li id="opt"><a id="addr" href="" >Gallery </a></li> <!--UPDATE LINKS-->
-			<li id="opt"><a id="addr" href="" >Events </a></li>
-		</ul>
-		<h3 id="hdr2">Admin Side</h1>
-		<ul id="admin">
-			<li id="admnNav"><a href="/acceptteacher.php" id="admAdr">Teacher Acceptance</a></li>
-      <li id="admnNav"><a href="/Addusers.php" id="admAdr">User Add</a></li>
-      <li id="admnNav"><a href="/deleteuser.php" id="admAdr">User Delete</a></li>
-      <li id="admnNav"><a href="/editteacher.php" id="admAdr">Teacher Edit</a></li>
-		</ul>
+		<div class="micon" onclick="changeM(this)" id="Menicon">
+      <div class="b1"></div>
+      <div class="b2"></div>
+      <div class="b3"></div>
+    </div>
+		<div id="navMenu" >
+      <div id="myTopnav" class="topnav">
+        <a id="addr" href="/Onlineapplication.php" >Online Application</a>
+        <a id="addr" href="/About us.php" >About Us</a>
+        <a id="addr" href="/addteacher.php" >Teacher Registration</a>
+        <a id="addr" href="/Schedules.php" >Schedule</a>
+        <a id="addr" href="" >Gallery</a>
+        <a id="addr" href="" >Events</a>
+        <div class="dropdown">
+          <button class="dropbtn">Admin
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/acceptteacher.php" id="admAdr">Teacher Acceptance</a>
+            <a href="/Addusers.php" id="admAdr">User Add</a>
+            <a href="/deleteuser.php" id="admAdr">User Delete</a>
+            <a href="/editteacher.php" id="admAdr">Teacher Edit</a>
+            <a href="#" class="secretGABtn" onclick="sgaBox()">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
 	</header>
-	
+
 	<div>
 		<div class="secret-bar" id="sBar">
 			<strong id="title">Please enter your Serial Code:</strong><br>
