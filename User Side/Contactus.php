@@ -14,7 +14,7 @@ Fun & Learn: Contact Us
 
 	<strong>
 		<h1 id="cntctU">Contact Us:</h1>
-	</strong> 
+	</strong>
 	<div id="cntct1">
 		Address:El Shatr(7), Zahraa El Maadi
 		<br>Contact:01067088943
@@ -30,6 +30,9 @@ Fun & Learn: Contact Us
 
 </body>
 <style type="text/css">
+	.footer{
+		text-align: center;
+	}
 	#cntctU{
 		text-align: center;
 		font-size: 15px;

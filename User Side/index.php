@@ -41,14 +41,15 @@
 		</ul>
 
 	</header>
-<div>
-	<div class="secret-bar" id="sBar">
-		<strong id="title">Please enter your Serial Code:</strong><br>
-		<input type="text" name="serial number" id="serialBar" > <!--value="Serial Code"-->
-		<input type="button" value="Submit" id="serialBtn">
-		<input type="button" value="Cancel" onclick="cancelGA()" id="cancelBtn">
+	
+	<div>
+		<div class="secret-bar" id="sBar">
+			<strong id="title">Please enter your Serial Code:</strong><br>
+			<input type="text" name="serial number" id="serialBar" > <!--value="Serial Code"-->
+			<input type="button" value="Submit" id="serialBtn">
+			<input type="button" value="Cancel" onclick="cancelGA()" id="cancelBtn">
+		</div>
 	</div>
-</div>
 
 	<div align="justify" class = "wt">
 		<h2>An important Message to all the parents : </h2><hr>
