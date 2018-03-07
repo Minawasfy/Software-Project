@@ -1,106 +1,99 @@
 <html>
-
 <head>
 
-<title>
-
-Fun & Learn
-
-</title>
-<link rel="stylesheet" type="text/css" href="/Logo.css">
-<img src="logo.png" id="logo" onclick="location.href='index.php';">
-
-<header>
-    <a href="/index.php">Back</a>
-</header>
-    
-<h1 align="left"> <p><u>Preliminary Teacher Application:</u></p> </h1>
+  <title>Fun & Learn: Teacher App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+  <header id="bkbtn">
+    <img src="logo.png" id="logo" onclick="location.href='/index.php';">
+    <button type="button" id="bkbtn" onclick="location.href='/index.php';">Back</button>
+  </header>
 </head>
 
 <body>
 
+  <div class = "teacher1">
+    <form>
+      <p id="h1t"><u>Preliminary Teacher Application:</u></p><br><br><hr>
+      Full name:
+      <input type="text" name="Fname" id="boxes" required><br><br>
+      Date of birth:
+      <input type="Date" name="tdob" id="boxes" required><br><br>
+      Nationality age:
+      <input type="number" name="nat" id="boxes" required><br><br>
+      Home Address:
+      <input type="text" name="address1" id="boxes" required><br><br>
+      Telephone number:
+      <input type="text" name="Tel" maxlength="8" id="boxes" required><br><br>
+      Mobile number 1:
+      <input type="text" name="number1" maxlength="11" id="boxes" required><br><br>
+      Mobile number 2:
+      <input type="text" name="number1" maxlength="11" id="boxes"><br><br>
+      Marital Status:<br>
+      <input type="radio" name="status" value="Single" checked>Single<br>
+      <input type="radio" name="status" value="Married">Married<br>
+      <input type="radio" name="status" value="Divorced">Divorced<br>
+      <input type="radio" name="status" value="Widowed">Widowed<br><br>
+      Academic Qualifications with Dates:<br>
+      Qualification 1:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q1" id="boxes"><br>
+      Qualification 2:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q2" id="boxes"><br>
+      Qualification 3:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q3" id="boxes"><br>
+      Qualification 4:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q4" id="boxes"><br>
+      Qualification 5:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q5" id="boxes"><br><br><hr>
+      Professional Qualifications with Dates:<br>
+      Qualification 1:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q11" id="boxes"><br>
+      Qualification 2:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q22" id="boxes"><br>
+      Qualification 3:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q33" id="boxes"><br>
+      Qualification 4:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q44" id="boxes"><br>
+      Qualification 5:
+      <textarea rows="1" cols="50" id="boxes"></textarea>
+      <input type="Date" name="q55" id="boxes"><br><br><hr>
 
-<div class = "teacher1">
+      Present Employer's Name:
+      <input type="text" name="Emname" id="boxes" required><br><br>
+      Present Employer's Address:
+      <input type="text" name="num123"  id="boxes"><br><br>
+      Present Employer's phone number:
+      <input type="text" name="Emnum" id="boxes" maxlength="11" required><br><br><hr>
 
+      Current or Last Salary:
+      <input type="number" name="salary" id="boxes" min="1" max ="10000" required><br><br>
+      Required Salary:
+      <input type="number" name="salary1" id="boxes" min="1" max ="10000" required><br><br>
 
-<form>
+      Have you been interviewed recently at other nurseries? if yes, please mention names:<br>
+      <input type="text" name="other1" id="boxes"><br><br>
 
-Full name:<br>
-<input type="text" name="Fname" required><br>
-Date of birth:<br>
-<input type="date" name="tdob" required><br>
-Nationality:<br>
-<input type="number" name="nat" required><br>
-Home Address:<br>
-<input type="text" name="address1" required><br>
-Telephone number:<br>
-<input type="text" name="Tel" maxlength="8" required><br>
-Mobile number 1:<br>
-<input type="text" name="number1" maxlength="11" required><br>
-Mobile number 2:<br>
-<input type="text" name="number1" maxlength="11"><br>
-Marital Status:<br>
-<input type="radio" name="status" value="Single" checked>Single<br>
-<input type="radio" name="status" value="Married">Married<br>
-<input type="radio" name="status" value="Divorced">Divorced<br>
-<input type="radio" name="status" value="Widowed">Widowed<br>
-Academic Qualifications with Dates:<br>
-Qualification 1:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q1"><br>
-Qualification 2:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q2"><br>
-Qualification 3:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q3"><br>
-Qualification 4:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q4"><br>
-Qualification 5:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q5"><br>
-<hr>
-Professional Qualifications with Dates:<br>
-Qualification 1:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q11"><br>
-Qualification 2:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q22"><br>
-Qualification 3:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q33"><br>
-Qualification 4:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q44"><br>
-Qualification 5:
-<textarea rows="1" cols="50"></textarea>
-<input type="Date" name="q55"><br>
-<hr>
+      In your point of view, how do you see an ideal nursery regarding its academic side?<br>
+      <textarea rows="1" cols="50" id="boxes"></textarea><br>
 
-Present Employer's Name:<br>
-<input type="text" name="Emname" required><br>
-Present Employer's Address:<br>
-<input type="text" name="num123" ><br>
-Present Employer's phone number:<br>
-<input type="text" name="Emnum" maxlength="11" required><br>
-<hr>
+      <br>
+      <input type="submit" value="Submit Form" id="Sbtn">
+      <input type="reset"  value="Reset Form" id="REbtn">
+    </form>
+  </div>
 
-Current or Last Salary:<br>
-<input type="number" name="salary" min="1" max ="10000" required><br>
-Required Salary:<br>
-<input type="number" name="salary1" min="1" max ="10000" required><br>
+  <div id="footer" style="top:250%;">
+		<object type="text/html" data="Contactus.php" id="ftr"></object>
+	</div>
 
-Have you been interviewed recently at other nurseries? if yes, please mention names:<br>
-<input type="text" name="other1"><br>
-
-In your point of view, how do you see an ideal nursery regarding its academic side?
-<textarea rows="1" cols="50"></textarea>
-
-<br>
-
-<hr><input type="submit" value="Submit Form">
-<input type="reset"  value="Reset Form">
-
+</body>
 </html>

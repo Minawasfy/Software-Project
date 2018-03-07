@@ -1,12 +1,11 @@
 <html>
 
 <head>
-	<title>
-	Fun & Learn: Welcome
-	</title>
+	<title>Fun & Learn: Welcome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
-	<link rel="stylesheet" href="SecretGetAway.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--arrow down-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<script type="text/javascript">
 		window.onload = function() {
 			document.getElementById('navMenu').style.display = 'none';
@@ -30,8 +29,8 @@
 
 <body>
 	<header>
-		<img src="logo.png" id="logo" onclick="location.href='index.php';">
-		<h1 id="welcm">Welcome</h1>
+		<img src="logo.png" id="logo" onclick="location.href='/index.php';">
+		<h1 id="h1W">Welcome</h1>
 		<div class="micon" onclick="changeM(this)" id="Menicon">
       <div class="b1"></div>
       <div class="b2"></div>
@@ -59,7 +58,6 @@
         </div>
       </div>
     </div>
-
 	</header>
 
 	<div>
@@ -70,9 +68,29 @@
 			<input type="button" value="Cancel" onclick="cancelGA()" id="cancelBtn">
 		</div>
 	</div>
-
+	<div class="pics">
+		<div class="picsLeft">
+			<img src="pic1.jpg" alt="pic1" id="pic1" class="w3-round-xxlarge">
+			<img src="pic2.jpg" alt="pic2" id="pic2" class="w3-round-xxlarge">
+			<img src="pic13.jpg" alt="pic13" id="pic3" class="w3-round-xxlarge">
+		</div>
+		<div class="picsRight">
+			<img src="pic10.jpg" alt="pic1" id="pic4" class="w3-round-xxlarge">
+			<img src="pic12.jpg" alt="pic12" id="pic5" class="w3-round-xxlarge">
+			<img src="pic3.jpg" alt="pic13" id="pic6" class="w3-round-xxlarge">
+		</div>
+		<div class="picsButtom">
+			<img src="pic5.jpg" alt="pic1" id="pic7" class="w3-round-xxlarge">
+			<img src="pic11.jpg" alt="pic12" id="pic8" class="w3-round-xxlarge">
+			<img src="pic4.jpg" alt="pic13" id="pic9" class="w3-round-xxlarge">
+			<img src="pic9.jpg" alt="pic13" id="pic10" class="w3-round-xxlarge">
+			<img src="pic6.jpg" alt="pic13" id="pic11" class="w3-round-xxlarge">
+			<img src="pic7.jpg" alt="pic13" id="pic12" class="w3-round-xxlarge">
+			<img src="pic8.jpg" alt="pic13" id="pic13" class="w3-round-xxlarge">
+		</div>
+	</div>
 	<div align="justify" class = "wt">
-		<h2>An important Message to all the parents : </h2><hr>
+		<h2 id="h2">An important Message to all the parents : </h2><hr>
 		Many parents are concerned when their children are not practicing letters
 		and numbers, they feel that completing paper and pencil exercises will most
 		effectively prepare their children for elementary school. To change this common idea
@@ -85,7 +103,7 @@
 	</div>
 
 	<div align="justify" class="ei">
-		<h2>Extra Information:</h2><hr>
+		<h2 id="h2">Extra Information:</h2><hr>
 		<ul>
 			<li>We have opened our second branch @ Al Me3rag, starting october 2017 </li>
 			<li>We have the honor serving Maadi children since 2008 </li>
@@ -98,8 +116,6 @@
 	<div id="footer">
 		<object type="text/html" data="Contactus.php" id="ftr"></object>
 	</div>
-
-	<br>
 
 </body>
 </html>
