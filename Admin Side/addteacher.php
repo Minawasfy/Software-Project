@@ -1,26 +1,20 @@
 <html>
-
 <head>
-  <title>Fun & Learn</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="StyleSheet.css">
-  <link rel="stylesheet" href="AdminSS.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--arrow down-->
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<h1 align="left" id="h11"> <p><u>Teacher Application:</u></p> </h1>
+
+  <title>Fun & Learn: Teacher App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+  <header id="bkbtn">
+    <img src="logo.png" id="logo" onclick="location.href='/index.php';">
+    <button type="button" id="bkbtn" onclick="location.href='/index.php';">Back</button>
+  </header>
 </head>
 
 <body>
-  <header>
-    <img src="logo.png" id="logo" onclick="location.href='/index.php';">
-    <p id="h1A">Edit</p><p id="h1Ac">Acceptance</p>
-    <button type="button" id="bkbtn" onclick="location.href='/index.php';">Back</button>
-    <button type="button" id="pabtn" onclick="location.href='';">Previous Applicaton</button>
-  	<button type="button" id="nabtn" onclick="location.href='';">Next Applicaton</button>
-  </header>
 
-  <div class = "teacher2">
+  <div class = "teacher1">
     <form>
+      <p id="h1t"><u>Preliminary Teacher Application:</u></p><br><br><hr>
       Full name:
       <input type="text" name="Fname" id="boxes" required><br><br>
       Date of birth:
@@ -91,9 +85,15 @@
       In your point of view, how do you see an ideal nursery regarding its academic side?<br>
       <textarea rows="1" cols="50" id="boxes"></textarea><br>
 
-      <button type="button" id="Dbtn">Delete Application</button>
-      <!--an alert should show-->
+      <br>
+      <input type="submit" value="Submit Form" id="Sbtn">
+      <input type="reset"  value="Reset Form" id="REbtn">
     </form>
   </div>
 
+  <div id="footer" style="top:250%;">
+		<object type="text/html" data="Contactus.php" id="ftr"></object>
+	</div>
+
+</body>
 </html>
