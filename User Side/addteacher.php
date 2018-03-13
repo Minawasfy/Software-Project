@@ -147,7 +147,7 @@ In your point of view, how do you see an ideal nursery regarding its academic si
 	  
                 if(($Fullname!="")&&($Dateofbirth!="")&&($Nationality!="")&&($HomeAddress!="")&&($Telnumber!="")&&($Mobilenumber1!="")&&($Mobilenumber2!="")&&($MarStat!="")&&($AQual1!="")&&($AQual2!="")&&($AQual3!="")&&($AQual4!="")&&($AQual5!="")&&($PQual1!="")&&($PQual2!="")&&($PQual3!="")&&($PQual4!="")&&($PQual5!="")&&($PresEmName!="")&&($PresEmAddr!="")&&($PresEmphonenumb!="")&&($CurrSalary!="")&&($ReqSal!="")&&($intna!="")&&($ac!="")){
         
-	   $sql="INSERT INTO user(____________________________________________) VALUES('$Fullname', '$Dateofbirth', '$Nationality', '$HomeAddress','$Telnumber', '$Mobilenumber1', '$Mobilenumber2', '$MarStat', '$AQual1', '$AQual2', '$AQual3', '$AQual4', '$AQual5', '$PQual1', '$PQual2', '$PQual3', '$PQual4', '$PQual5', '$PresEmName', '$PresEmAddr', '$PresEmphonenumb', '$CurrSalary', '$ReqSal', '$intna', '$ac')";
+	   $sql="INSERT INTO teacher(nationality_id,telnum,mobile1,maritalstatus,acaqual1,date_acaqual1,personal_qual1,date_ppersonalqual1,pempname,pempaddress,pempnum,corlsalary,reqsalary,othernursery,povnursery VALUES('$Fullname', '$Dateofbirth', '$Nationality', '$HomeAddress','$Telnumber', '$Mobilenumber1', '$Mobilenumber2', '$MarStat', '$AQual1', '$AQual2', '$AQual3', '$AQual4', '$AQual5', '$PQual1', '$PQual2', '$PQual3', '$PQual4', '$PQual5', '$PresEmName', '$PresEmAddr', '$PresEmphonenumb', '$CurrSalary', '$ReqSal', '$intna', '$ac')";
     
 	 if($conn->query($sql)===true){ 
 	

@@ -392,7 +392,7 @@
 	
     if(($Chname!="")&&($dob!="")&&($presentage!="")&&($desireddate!="")&&($Fathname!="")&&($Mobnum1!="")&&($Occup1!="")&&($Officeno1!="")&&($Mothname!="")&&($Mobnum2!="")&&($Occup2!="")&&($Officeno2!="")&&($Parstatus!="")&&($Homeadr!="")&&($HomeTel!="")&&($pickup!="")&&($preftick!="")&&($EmConNa!="")&&($EmConAdr!="")&&($attend!="")&&($Relation!="")&&($EmConNo!="")&&($formdate!="")){
         
-	$sql="INSERT INTO user(____________________________________________) VALUES('$Chname', '$dob', '$presentage', '$desireddate','$Fathname', '$Mobnum1', '$Occup1', '$Officeno1', '$Mothname', '$Mobnum2', '$Occup2', '$Officeno2', '$Parstatus', '$Homeadr', '$HomeTel', '$pickup', '$preftick', '$EmConNa', '$EmconAdr', '$attend', '$Relation', '$EmConNo', '$formdate')";
+	$sql="INSERT INTO parent(faname,fnum,ffbook,foccupation,fofficenum,mname,mnum,mfbook,moccupation,mofficenum,mstatusaddres_id,homenum,usualpickup) VALUES('$Chname', '$dob', '$presentage', '$desireddate','$Fathname', '$Mobnum1', '$Occup1', '$Officeno1', '$Mothname', '$Mobnum2', '$Occup2', '$Officeno2', '$Parstatus', '$Homeadr', '$HomeTel', '$pickup', '$preftick', '$EmConNa', '$EmconAdr', '$attend', '$Relation', '$EmConNo', '$formdate')";
     
 	 if($conn->query($sql)===true){ 
 	
