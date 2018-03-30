@@ -272,18 +272,14 @@
 </body>
 <!--- BACKEND-->
 <?php
+    require_once('db.php');
     class userreg
     {
         var $Chname,$dob,$presentage,$desireddate,$Fathname,$Mobnum1,$fb1,$Occup1,$Officeno1,$Mothname,$Mobnum2,$fb2,$Occup2,$Officeno2,$Parstatus, $Homeadr,$HomeTel,$pickup,$preftick,$EmConNa,$EmConAdr,$EmConN,$Relation,$EmConNo,$Medinfo,$formdate,$mobilee,$office,$cho1,$cho2
         
         
-    $conn=new mysqli("localhost","root","","__system");
-    if($conn->connect_error){
-	   die("Connection failed:".$conn->connect_error);
-    }
-        
         function __construct() {
-        $Chname=$dob=$presentage=$desireddate=$Fathname=$Mobnum1=$fb1=$Occup1=$Officeno1=$Mothname=$Mobnum2=$fb2=$Occup2=$Officeno2=$Parstatus= $Homeadr=$HomeTel=$pickup=$preftick=$EmConNa=$EmConAdr=$EmConN=$Relation=$EmConNo=$Medinfo=$formdate=$mobilee=$office=""
+        $Chname=$dob=$presentage=$desireddate=$Fathname=$Mobnum1=$fb1=$Occup1=$Officeno1=$Mothname=$Mobnum2=$fb2=$Occup2=$Officeno2=$Parstatus= $Homeadr=$HomeTel=$pickup=$EmConNa=$EmConAdr=$EmConN=$Relation=$EmConNo=$Medinfo=$formdate=$mobilee=$office=""
         $cho1=$cho2=""
         }
         
@@ -312,7 +308,7 @@
 		  $Fathname="";
 	    }
         $Mobnum1=valid($_POST["number1"]);
-        $sql="SELECT COUNT(Username) FROM ____ WHERE MobileNumber='$Mobnum1'; ";
+        $sql="SELECT COUNT(Username) FROM ____ WHERE fnum='$Mobnum1'; ";
 		  $result=$conn->query($sql);
 		  $result->num_rows;
 		  $row = $result->fetch_assoc();
@@ -323,7 +319,7 @@
         $fb1=valid($_POST["Fb1"]);
         $Occup1=valid($_POST["occ1"]);
         $Officeno1=valid($_POST["off1"]);
-        $sql="SELECT COUNT(Username) FROM ____ WHERE OfficeNumber='$Officeno1'; ";
+        $sql="SELECT COUNT(Username) FROM ____ WHERE fofficenum='$Officeno1'; ";
         $result=$conn->query($sql);
         $result->num_rows;
         $row = $result->fetch_assoc();
@@ -337,7 +333,7 @@
 		  $Mothname="";
 	    }
     $Mobnum2=valid($_POST["number2"]);
-    $sql="SELECT COUNT(Username) FROM ____ WHERE MobileNumber='$Mobnum2'; ";
+    $sql="SELECT COUNT(Username) FROM parent WHERE mnum='$Mobnum2'; ";
 		  $result=$conn->query($sql);
 		  $result->num_rows;
 		  $row = $result->fetch_assoc();
@@ -348,9 +344,9 @@
     $fb2=valid($_POST["Fb2"]);
     $Occup2=valid($_POST["occ2"]);
     $Officeno2=valid($_POST["off2"]);
-    $sql="SELECT COUNT(Username) FROM ____ WHERE OfficeNumber='$Officeno2'; ";
-		  $result=$conn->query($sql);
-		  $result->num_rows;
+    $sql1="SELECT COUNT(Username) FROM parent WHERE mofficenum='$Officeno2'; ";
+		  $result1=$conn->query($sql1);
+		  $result1->num_rows;rr
 		  $row = $result->fetch_assoc();
 		  if($row['COUNT(Username)']>0){
 			 $office="Office number already in use";
@@ -370,7 +366,6 @@
 		  $Chname="Only Letters and wightspaces are Allowed!";
 		  $Chname="";
 	    }
-    $preftick=valid($_POST["name1"]);
     $attend=valid($_POST["status1"]);
     //Ba3deeen
     if($attend=="Married"){
@@ -390,10 +385,22 @@
     $Medinfo=valid($_POST["info"]);
     $formdate=valid($_POST["date1"]);
 	
-    if(($Chname!="")&&($dob!="")&&($presentage!="")&&($desireddate!="")&&($Fathname!="")&&($Mobnum1!="")&&($Occup1!="")&&($Officeno1!="")&&($Mothname!="")&&($Mobnum2!="")&&($Occup2!="")&&($Officeno2!="")&&($Parstatus!="")&&($Homeadr!="")&&($HomeTel!="")&&($pickup!="")&&($preftick!="")&&($EmConNa!="")&&($EmConAdr!="")&&($attend!="")&&($Relation!="")&&($EmConNo!="")&&($formdate!="")){
-        
-	$sql="INSERT INTO parent(faname,fnum,ffbook,foccupation,fofficenum,mname,mnum,mfbook,moccupation,mofficenum,mstatusaddres_id,homenum,usualpickup) VALUES('$Chname', '$dob', '$presentage', '$desireddate','$Fathname', '$Mobnum1', '$Occup1', '$Officeno1', '$Mothname', '$Mobnum2', '$Occup2', '$Officeno2', '$Parstatus', '$Homeadr', '$HomeTel', '$pickup', '$preftick', '$EmConNa', '$EmconAdr', '$attend', '$Relation', '$EmConNo', '$formdate')";
+    if(($Chname!="")&&($dob!="")&&($presentage!="")&&($desireddate!="")&&($Fathname!="")&&($Mobnum1!="")&&($Occup1!="")&&($Officeno1!="")&&($Mothname!="")&&($Mobnum2!="")&&($Occup2!="")&&($Officeno2!="")&&($Parstatus!="")&&($Homeadr!="")&&($HomeTel!="")&&($pickup!="")&&($EmConNa!="")&&($EmConAdr!="")&&($attend!="")&&($Relation!="")&&($EmConNo!="")&&($formdate!="")&&($Medinfo!="")){
     
+    $dob= //Dont know how to implement it
+        
+    $user="INSERT INTO user(ddoe,main_id)
+    VALUES($desireddate',')"
+        
+    $emerg="INSERT INTO emergency(u_id,ecname,relation,ecnum,extrainfo)
+    VALUES(','$EmConNa','$Relation','$EmConNo','$Medinfo)"    
+        
+    $child="INSERT INTO main(fname,lname,age,ssn)
+    VALUES($Chname','$Fathname','$presentage',')"
+        
+	$parent="INSERT INTO parent(faname,fnum,ffbook,foccupation,fofficenum,mname,mnum,mfbook,moccupation,mofficenum,mstatus,addres_id,homenum,usualpickup) VALUES('$Fathname', '$Mobnum1','$Occup1', '$Officeno1','$Mothname', '$Mobnum2', '$Officeno2', '$Parstatus', '$Homeadr','$HomeTel', '$pickup)";
+    $res = $db->execute($parent);
+        
 	 if($conn->query($sql)===true){ 
 	
 	    alert("Your Application has been submitted Successsfully!");    

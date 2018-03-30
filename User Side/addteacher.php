@@ -93,13 +93,15 @@ In your point of view, how do you see an ideal nursery regarding its academic si
 
 <hr><input type="submit" value="Submit Form">
 <input type="reset"  value="Reset Form">
-<?php
+</body>
+    <?php
+    require_once('db.php');
     class teacheradd 
     {
         var $Fullname,$Dateofbirth,$Nationality,$HomeAddress,$Telnumber,$Mobilenumber1,$Mobilenumber2,$MarStat,$AQual1,$AQual2,$AQual3,$AQual4,$AQual5,$PQual1,$PQual2,$PQual3,$PQual4,$PQual5,$PresEmName,$PresEmAddr,$PresEmphonenumb,$CurrSalary,$ReqSal,$intna,$ac;
         
             function __construct() {
-            $Fullname=$Dateofbirth=$Nationality=$HomeAddress=$Telnumber=$Mobilenumber1=$Mobilenumber2=$MarStat=$AQual1=$AQual2=$AQual3=$AQual4=$AQual5=$PQual1=$PQual2=$PQual3=$PQual4=$PQual5=$PresEmName=$PresEmAddr=$PresEmphonenumb=$CurrSalary=$ReqSal=$intna=$ac=""
+            $Fullname=$Dateofbirth=$Nationality=$HomeAddress=$Telnumber=$Mobilenumber1=$MarStat=$AQual1=$AQual2=$AQual3=$AQual4=$AQual5=$PQual1=$PQual2=$PQual3=$PQual4=$PQual5=$PresEmName=$PresEmAddr=$PresEmphonenumb=$CurrSalary=$ReqSal=$intna=$ac=""
         }
         
         
@@ -145,9 +147,9 @@ In your point of view, how do you see an ideal nursery regarding its academic si
             $ac=valid($_POST["other2"]);
 
 	  
-                if(($Fullname!="")&&($Dateofbirth!="")&&($Nationality!="")&&($HomeAddress!="")&&($Telnumber!="")&&($Mobilenumber1!="")&&($Mobilenumber2!="")&&($MarStat!="")&&($AQual1!="")&&($AQual2!="")&&($AQual3!="")&&($AQual4!="")&&($AQual5!="")&&($PQual1!="")&&($PQual2!="")&&($PQual3!="")&&($PQual4!="")&&($PQual5!="")&&($PresEmName!="")&&($PresEmAddr!="")&&($PresEmphonenumb!="")&&($CurrSalary!="")&&($ReqSal!="")&&($intna!="")&&($ac!="")){
+                if(($Fullname!="")&&($Dateofbirth!="")&&($Nationality!="")&&($HomeAddress!="")&&($Telnumber!="")&&($Mobilenumber1!="")&&($MarStat!="")&&($AQual1!="")&&($AQual2!="")&&($AQual3!="")&&($AQual4!="")&&($AQual5!="")&&($PQual1!="")&&($PQual2!="")&&($PQual3!="")&&($PQual4!="")&&($PQual5!="")&&($PresEmName!="")&&($PresEmAddr!="")&&($PresEmphonenumb!="")&&($CurrSalary!="")&&($ReqSal!="")&&($intna!="")&&($ac!="")){
         
-	   $sql="INSERT INTO teacher(nationality_id,telnum,mobile1,maritalstatus,acaqual1,date_acaqual1,personal_qual1,date_ppersonalqual1,pempname,pempaddress,pempnum,corlsalary,reqsalary,othernursery,povnursery VALUES('$Fullname', '$Dateofbirth', '$Nationality', '$HomeAddress','$Telnumber', '$Mobilenumber1', '$Mobilenumber2', '$MarStat', '$AQual1', '$AQual2', '$AQual3', '$AQual4', '$AQual5', '$PQual1', '$PQual2', '$PQual3', '$PQual4', '$PQual5', '$PresEmName', '$PresEmAddr', '$PresEmphonenumb', '$CurrSalary', '$ReqSal', '$intna', '$ac')";
+	   $sql="INSERT INTO teacher(nationality,address_id,main_id,telnum,mobile1,maritalstatus,acaqual1,date_acaqual1,personal_qual1,date_ppersonalqual1,pempname,pempaddress_id,pempnum,corlsalary,reqsalary,othernursery,povnursery VALUES('$Nationality',' ', ' ', '$HomeAddress',' ', '$Telnumber', '$Mobilenumber1', '$MarStat', ('$AQual1', '$AQual2', '$AQual3', '$AQual4', '$AQual5'),('$PQual1', '$PQual2', '$PQual3', '$PQual4', '$PQual5'), '$PresEmName', '$PresEmAddr', '$PresEmphonenumb', '$CurrSalary', '$ReqSal', '$intna', '$ac')";
     
 	 if($conn->query($sql)===true){ 
 	
@@ -164,5 +166,5 @@ In your point of view, how do you see an ideal nursery regarding its academic si
 }
    
 ?>
-    
+
 </html>
