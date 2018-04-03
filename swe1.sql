@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 01, 2018 at 12:33 PM
+-- Generation Time: Apr 03, 2018 at 03:08 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `courses`
@@ -152,28 +152,6 @@ INSERT INTO `courses` (`id`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dob`
---
-
-DROP TABLE IF EXISTS `dob`;
-CREATE TABLE IF NOT EXISTS `dob` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `day` int(11) NOT NULL,
-  `month` int(11) NOT NULL,
-  `year` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `dob`
---
-
-INSERT INTO `dob` (`id`, `day`, `month`, `year`) VALUES
-(1, 27, 11, 1997);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `emergency`
 --
 
@@ -189,7 +167,14 @@ CREATE TABLE IF NOT EXISTS `emergency` (
   PRIMARY KEY (`id`),
   KEY `ecaddress_id` (`ecaddress_id`),
   KEY `main_id` (`main_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `emergency`
+--
+
+INSERT INTO `emergency` (`id`, `main_id`, `ecname`, `ecaddress_id`, `relation`, `ecnum`, `extrainfo`) VALUES
+(1, 1, 'Moustafa waly', 5, 'jasnouda', 1234567, 'jnicuansiufnaiusnc');
 
 -- --------------------------------------------------------
 
@@ -248,13 +233,47 @@ CREATE TABLE IF NOT EXISTS `main` (
   `utype` int(11) NOT NULL,
   `fname` varchar(100) NOT NULL,
   `lname` varchar(100) NOT NULL,
-  `dob_id` int(11) NOT NULL,
-  `age` int(11) NOT NULL,
-  `ssn` int(11) NOT NULL COMMENT 'can also be social num',
+  `dob` date NOT NULL,
+  `ssn` bigint(14) NOT NULL COMMENT 'can also be social num',
+  `Dateofapply` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  KEY `dob_id` (`dob_id`),
-  KEY `utype` (`utype`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `utype` (`utype`),
+  KEY `dob` (`dob`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `main`
+--
+
+INSERT INTO `main` (`id`, `utype`, `fname`, `lname`, `dob`, `ssn`, `Dateofapply`) VALUES
+(1, 1, 'mostafa', 'waly', '1997-11-27', 12345123451235, '2018-04-01 14:38:33'),
+(2, 1, 'mostwfa', 'wasfaw', '1997-11-27', 1234567543263, '2018-04-01 14:48:06'),
+(3, 1, 'mostafa', 'waly', '1997-11-27', 2612395129357, '2018-04-01 15:57:21'),
+(4, 1, 'mostafa', 'waly', '1997-11-27', 2612395129357, '2018-04-01 15:57:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `maritalstatus`
+--
+
+DROP TABLE IF EXISTS `maritalstatus`;
+CREATE TABLE IF NOT EXISTS `maritalstatus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `value` varchar(25) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `maritalstatus`
+--
+
+INSERT INTO `maritalstatus` (`id`, `value`) VALUES
+(1, 'Married'),
+(2, 'Divorced '),
+(3, 'Married'),
+(4, 'Widowed'),
+(5, 'Never Married');
 
 -- --------------------------------------------------------
 
@@ -316,7 +335,9 @@ CREATE TABLE IF NOT EXISTS `page` (
 DROP TABLE IF EXISTS `parent`;
 CREATE TABLE IF NOT EXISTS `parent` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `main_id` int(11) NOT NULL,
+  `child_id` int(11) NOT NULL,
+  `mother_id` int(11) NOT NULL,
+  `father_id` int(11) NOT NULL,
   `fnum` int(11) NOT NULL,
   `ffbook` varchar(200) NOT NULL,
   `foccupation` varchar(100) NOT NULL,
@@ -325,14 +346,24 @@ CREATE TABLE IF NOT EXISTS `parent` (
   `mfbook` varchar(200) NOT NULL,
   `moccupation` varchar(100) NOT NULL,
   `mofficenum` int(8) NOT NULL,
-  `mstatus` int(1) NOT NULL,
+  `mstatus_id` int(11) NOT NULL,
   `addres_id` int(11) NOT NULL,
   `homenum` int(8) NOT NULL,
   `usualpickup` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `main_id` (`main_id`),
-  KEY `addres_id` (`addres_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `addres_id` (`addres_id`),
+  KEY `child_id` (`child_id`) USING BTREE,
+  KEY `mother_id` (`mother_id`),
+  KEY `father_id` (`father_id`),
+  KEY `mstatus_id` (`mstatus_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `parent`
+--
+
+INSERT INTO `parent` (`id`, `child_id`, `mother_id`, `father_id`, `fnum`, `ffbook`, `foccupation`, `fofficenum`, `mnum`, `mfbook`, `moccupation`, `mofficenum`, `mstatus_id`, `addres_id`, `homenum`, `usualpickup`) VALUES
+(1, 2, 3, 4, 234567, 'nuasfunasuf', 'nsva soufnaousnf', 12345678, 13435678, 'nainasivnaonsfouan', 'savnaoisnoianvioan', 213245678, 5, 5, 2345677, 'mohamed');
 
 -- --------------------------------------------------------
 
@@ -555,13 +586,13 @@ INSERT INTO `status` (`id`, `name`) VALUES
 
 DROP TABLE IF EXISTS `teacher`;
 CREATE TABLE IF NOT EXISTS `teacher` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nationality` int(100) NOT NULL,
   `address_id` int(11) NOT NULL,
   `main_id` int(11) NOT NULL,
   `telnum` int(8) NOT NULL,
   `mobile1` int(11) NOT NULL,
-  `maritalstatus` int(11) NOT NULL,
+  `mstatus_id` int(11) NOT NULL,
   `acaqual1` varchar(300) NOT NULL,
   `date_acaqual1` int(8) NOT NULL,
   `personal_qual1` varchar(300) NOT NULL,
@@ -577,8 +608,16 @@ CREATE TABLE IF NOT EXISTS `teacher` (
   KEY `main_id` (`main_id`),
   KEY `pempaddress_id` (`pempaddress_id`),
   KEY `address_id` (`address_id`),
-  KEY `nationality` (`nationality`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  KEY `nationality` (`nationality`),
+  KEY `maritalstatus` (`mstatus_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teacher`
+--
+
+INSERT INTO `teacher` (`id`, `nationality`, `address_id`, `main_id`, `telnum`, `mobile1`, `mstatus_id`, `acaqual1`, `date_acaqual1`, `personal_qual1`, `date_ppersonalqual1`, `pempname`, `pempaddress_id`, `pempnum`, `corlsalary`, `reqsalary`, `othernursery`, `povnursery`) VALUES
+(1, 3, 3, 4, 12345678, 3456789, 1, 'fnakhs vha shffausfiunfa', 214123, 'uianfiuansfuinag', 1235123, 'gunuisanuiafg', 4, 1234567, 25123, 12351, 'jknaiuvnauisnfuiansuifn', 'uadguiansuifnuiansf');
 
 -- --------------------------------------------------------
 
@@ -747,15 +786,17 @@ ALTER TABLE `emergency`
 -- Constraints for table `main`
 --
 ALTER TABLE `main`
-  ADD CONSTRAINT `main_ibfk_1` FOREIGN KEY (`dob_id`) REFERENCES `dob` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `main_ibfk_3` FOREIGN KEY (`utype`) REFERENCES `usertypelu` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `parent`
 --
 ALTER TABLE `parent`
-  ADD CONSTRAINT `parent_ibfk_2` FOREIGN KEY (`main_id`) REFERENCES `main` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `parent_ibfk_3` FOREIGN KEY (`addres_id`) REFERENCES `address` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `parent_ibfk_2` FOREIGN KEY (`child_id`) REFERENCES `main` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `parent_ibfk_3` FOREIGN KEY (`addres_id`) REFERENCES `address` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `parent_ibfk_4` FOREIGN KEY (`mother_id`) REFERENCES `main` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `parent_ibfk_5` FOREIGN KEY (`father_id`) REFERENCES `main` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `parent_ibfk_6` FOREIGN KEY (`mstatus_id`) REFERENCES `maritalstatus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `paymentopt`
@@ -804,7 +845,8 @@ ALTER TABLE `teacher`
   ADD CONSTRAINT `teacher_ibfk_1` FOREIGN KEY (`main_id`) REFERENCES `main` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `teacher_ibfk_3` FOREIGN KEY (`pempaddress_id`) REFERENCES `address` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `teacher_ibfk_4` FOREIGN KEY (`address_id`) REFERENCES `address` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `teacher_ibfk_5` FOREIGN KEY (`nationality`) REFERENCES `nationality` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `teacher_ibfk_5` FOREIGN KEY (`nationality`) REFERENCES `nationality` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `teacher_ibfk_6` FOREIGN KEY (`mstatus_id`) REFERENCES `maritalstatus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `user`
