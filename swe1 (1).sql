@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 07, 2018 at 10:24 AM
+-- Generation Time: Apr 07, 2018 at 06:59 PM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -131,14 +131,16 @@ CREATE TABLE IF NOT EXISTS `child` (
   PRIMARY KEY (`id`),
   KEY `main_id` (`main_id`),
   KEY `childtype` (`childtype`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `child`
 --
 
 INSERT INTO `child` (`id`, `ddoe`, `childtype`, `main_id`) VALUES
-(1, 4, 2, 2);
+(1, 4, 2, 2),
+(2, 5, 1, 4),
+(3, 5, 1, 4);
 
 -- --------------------------------------------------------
 
@@ -315,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `main` (
 --
 
 INSERT INTO `main` (`id`, `utype`, `fname`, `lname`, `dob`, `ssn`, `Dateofapply`) VALUES
-(1, 1, 'mostafa', 'waly', '1997-11-27', 12345123451235, '2018-04-01 14:38:33'),
+(1, 1, 'Mustafa', 'WALLY', '1998-05-27', 987654321, '2018-04-01 14:38:33'),
 (2, 1, 'mostwfa', 'wasfaw', '1997-11-27', 1234567543263, '2018-04-01 14:48:06'),
 (3, 1, 'mostafa', 'waly', '1997-11-27', 2612395129357, '2018-04-01 15:57:21'),
 (4, 1, 'mostafa', 'waly', '1997-11-27', 2612395129357, '2018-04-01 15:57:21'),
@@ -603,27 +605,6 @@ CREATE TABLE IF NOT EXISTS `schedule_int` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `schedule_type`
---
-
-DROP TABLE IF EXISTS `schedule_type`;
-CREATE TABLE IF NOT EXISTS `schedule_type` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `type` varchar(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `schedule_type`
---
-
-INSERT INTO `schedule_type` (`id`, `type`) VALUES
-(1, 'Junior'),
-(2, 'Senior');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `status`
 --
 
@@ -888,8 +869,7 @@ ALTER TABLE `qual_look`
 -- Constraints for table `schedule`
 --
 ALTER TABLE `schedule`
-  ADD CONSTRAINT `schedule_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `schedule_ibfk_2` FOREIGN KEY (`scheduletype_id`) REFERENCES `schedule_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `schedule_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `schedule_int`
